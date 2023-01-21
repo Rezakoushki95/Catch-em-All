@@ -19,20 +19,39 @@ class ListViewController: UIViewController {
 		tableView.dataSource = self
 		pokemons.getData {
 			DispatchQueue.main.async {
+				self.navigationItem.title = "\(self.pokemons.pokemonArray.count) of \(self.pokemons.count) pokemons."
 				self.tableView.reloadData()
 			}
 		}
+	}
+	
+	func loadAll() {
+		if pokemons.urlString.hasPrefix("http") {
+			pokemons.getData {
+				DispatchQueue.main.async {
+					self.navigationItem.title = "\(self.pokemons.pokemonArray.count) of \(self.pokemons.count) pokemons."
+					self.tableView.reloadData()
+				}
+				self.loadAll()
+			}
+		} else {
+			print("All done - all loaded. Total Pokemons = \(pokemons.pokemonArray.count)")
+		}
+	}
+	
+	@IBAction func loadAllButtonPressed(_ sender: UIBarButtonItem) {
+		loadAll()
 	}
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		print("\(indexPath.row+1) of \(pokemons.pokemonArray.count)")
-		let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath)
+  		let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath)
 		if indexPath.row == pokemons.pokemonArray.count-1 && pokemons.urlString.hasPrefix("http") {
 			pokemons.getData {
 				DispatchQueue.main.async {
+					self.navigationItem.title = "\(self.pokemons.pokemonArray.count) of \(self.pokemons.count) pokemons."
 					self.tableView.reloadData()
 				}
 			}

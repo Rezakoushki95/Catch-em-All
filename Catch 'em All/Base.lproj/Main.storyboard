@@ -49,7 +49,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pgO-Hl-Fry" secondAttribute="trailing" id="c6B-gJ-OL5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Vy5-pI-KO6"/>
+                    <navigationItem key="navigationItem" id="Vy5-pI-KO6">
+                        <barButtonItem key="leftBarButtonItem" title="Load All" id="A2a-7R-Ii8">
+                            <connections>
+                                <action selector="loadAllButtonPressed:" destination="BYZ-38-t0r" id="Xl4-SA-9Qu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="pgO-Hl-Fry" id="qo4-Eg-dHn"/>
                     </connections>
