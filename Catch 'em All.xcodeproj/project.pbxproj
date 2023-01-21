@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F573CB82297C75B400FBC859 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573CB81297C75B400FBC859 /* Pokemon.swift */; };
+		F573CB84297C786600FBC859 /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573CB83297C786600FBC859 /* PokemonDetail.swift */; };
 		F57ABCDA29706AE700561B18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ABCD929706AE700561B18 /* AppDelegate.swift */; };
 		F57ABCDC29706AE700561B18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ABCDB29706AE700561B18 /* SceneDelegate.swift */; };
 		F57ABCDE29706AE700561B18 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ABCDD29706AE700561B18 /* ListViewController.swift */; };
@@ -14,9 +16,12 @@
 		F57ABCE329706AEB00561B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57ABCE229706AEB00561B18 /* Assets.xcassets */; };
 		F57ABCE629706AEB00561B18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57ABCE429706AEB00561B18 /* LaunchScreen.storyboard */; };
 		F57ABCEE2970713B00561B18 /* Pokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57ABCED2970713B00561B18 /* Pokemons.swift */; };
+		F59D9053297C7045008BCFA3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59D9052297C7045008BCFA3 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F573CB81297C75B400FBC859 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		F573CB83297C786600FBC859 /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
 		F57ABCD629706AE700561B18 /* Catch 'em All.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Catch 'em All.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57ABCD929706AE700561B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57ABCDB29706AE700561B18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		F57ABCE529706AEB00561B18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F57ABCE729706AEB00561B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F57ABCED2970713B00561B18 /* Pokemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemons.swift; sourceTree = "<group>"; };
+		F59D9052297C7045008BCFA3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,11 @@
 			children = (
 				F57ABCD929706AE700561B18 /* AppDelegate.swift */,
 				F57ABCDB29706AE700561B18 /* SceneDelegate.swift */,
+				F573CB81297C75B400FBC859 /* Pokemon.swift */,
+				F573CB83297C786600FBC859 /* PokemonDetail.swift */,
 				F57ABCED2970713B00561B18 /* Pokemons.swift */,
 				F57ABCDD29706AE700561B18 /* ListViewController.swift */,
+				F59D9052297C7045008BCFA3 /* DetailViewController.swift */,
 				F57ABCDF29706AE800561B18 /* Main.storyboard */,
 				F57ABCE229706AEB00561B18 /* Assets.xcassets */,
 				F57ABCE429706AEB00561B18 /* LaunchScreen.storyboard */,
@@ -143,8 +152,11 @@
 			files = (
 				F57ABCDE29706AE700561B18 /* ListViewController.swift in Sources */,
 				F57ABCEE2970713B00561B18 /* Pokemons.swift in Sources */,
+				F573CB84297C786600FBC859 /* PokemonDetail.swift in Sources */,
+				F59D9053297C7045008BCFA3 /* DetailViewController.swift in Sources */,
 				F57ABCDA29706AE700561B18 /* AppDelegate.swift in Sources */,
 				F57ABCDC29706AE700561B18 /* SceneDelegate.swift in Sources */,
+				F573CB82297C75B400FBC859 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

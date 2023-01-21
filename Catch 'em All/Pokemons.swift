@@ -15,11 +15,6 @@ class Pokemons {
 		var results: [Pokemon]
 	}
 	
-	struct Pokemon: Codable {
-		var name = ""
-		var url = ""
-	}
-	
 	var count = 0
 	var urlString = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20"
 	var pokemonArray: [Pokemon] = []

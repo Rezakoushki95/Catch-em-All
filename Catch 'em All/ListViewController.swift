@@ -39,6 +39,14 @@ class ListViewController: UIViewController {
 		view.addSubview(activityIndicator)
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "ShowDetail" {
+			let destination = segue.destination as! DetailViewController
+			let selectedIndexPath = tableView.indexPathForSelectedRow!
+			destination.pokemon = pokemons.pokemonArray[selectedIndexPath.row]
+		}
+	}
+	
 	func loadAll() {
 		if pokemons.urlString.hasPrefix("http") {
 			pokemons.getData {
