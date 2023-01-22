@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class PokemonDetail {
 	
@@ -16,7 +17,7 @@ class PokemonDetail {
 	}
 	
 	private struct Sprites: Codable {
-		var front_default: String
+		var front_default: String?
 	}
 	
 	var height = 0.0
@@ -46,7 +47,7 @@ class PokemonDetail {
 				print("Here is what I've returned: \(returned)")
 				self.height = returned.height
 				self.weight = returned.weight
-				self.imageURL = returned.sprites.front_default
+				self.imageURL = returned.sprites.front_default ?? ""
 			} catch {
 				print("JSON ERROR: Thrown when we tried to decode from Returned.self with data")
 			}

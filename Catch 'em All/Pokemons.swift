@@ -18,8 +18,12 @@ class Pokemons {
 	var count = 0
 	var urlString = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20"
 	var pokemonArray: [Pokemon] = []
+	var isFetching = false
 	
 	func getData(completed: @escaping ()->()) {
+		// Do not get data, if already fetching data: -avoid double fetch.
+		guard !isFetching else {return}
+		
 		print("We are accessing the url \(urlString)")
 		
 		// Create a URL
@@ -38,7 +42,7 @@ class Pokemons {
 			}
 			do {
 				let returned = try JSONDecoder().decode(Returned.self, from: data!)
-				print("Here is what was returned \(returned)")
+//				print("Here is what was returned \(returned)")
 				self.pokemonArray.append(contentsOf: returned.results)
 				self.urlString = returned.next ?? ""
 				self.count = returned.count
@@ -47,6 +51,7 @@ class Pokemons {
 				print("JSON ERROR: Thrown when we tried to decode from Returned.self with data")
 			}
 			completed()
+			self.isFetching = false
 		}
 		task.resume()
 	}
